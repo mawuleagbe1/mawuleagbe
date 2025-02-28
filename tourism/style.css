@@ -1,0 +1,610 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --bg-color: white;
+    --primary: black;
+    --secodary: rgb(6, 151, 49);
+    --tertiary: white;
+    --fourth: rgb(119, 112, 112);
+    --linear-background: linear-gradient(45deg, rgba(0, 0, 0, 0.171), rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.185));
+    --linear-background-destination: linear-gradient(to bottom, black, black, );
+}
+.btn{
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0,1rem;
+    cursor:pointer;
+
+}
+.bg_btn{
+    width: 200px;
+    background: greenyellow;
+    border: 2px solid var(--secodary);
+    border-radius: 20px;
+    transition: 0.68s ease-out;
+}
+
+.border_btn{
+    width: 200px;
+    background: green;
+    border: 2px solid var(--secodary);
+    color: var(--bg-color);
+    border-radius: 20px;
+    transition: 0.68s ease-out;
+}
+.tna{
+    color: white;
+}
+
+.border_btn:hover{
+    background: var(--secodary);
+    border: 2px solid var(--secodary);
+    color: var(--tertiary);
+}
+/* global tag section */
+.tag_section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.tag_center{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.tag_title{
+    font-size: 1,7rem;
+    font-weight: 500;
+    color: var(--primary);
+    letter-spacing: 0.1rem;
+    margin-bottom: 0rem;
+}
+.tag_indicator{
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.line{
+    width: 90px;
+    height: 2px;
+    background: var(--secodary);
+}
+.circle{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--secodary);
+    margin-left:-0.2rem ;
+    box-shadow: 0px 0px 8px rgba(266, 72, 6, 1);
+}
+/* main section */
+.main_section{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+/* bg img section */
+.bg_image_section{
+    width: 100%;
+    height: 100vh;
+    background: var(--linear-background), url(/image/Independence_Square_Accra_Ghana.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+/* culture */
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(51, 11, 11, 0.664), rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.356)), url(/image/proxy-image\ \(1\).jpg) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    
+}
+.conent{
+    text-align: center;
+}
+.content h2{
+    font-size: 95px;
+    color: #fff;
+    margin-bottom: 50px;
+} 
+.background_clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio) {
+    .background_clip{
+        width: 100%;
+        height: auto;
+    }
+
+}
+@media (max-aspect-ratio: 16/16) {
+    .background_clip{
+        width: auto;
+        height: 100%;
+    }
+}
+    
+.nav_section{
+    width: 100%;
+    height: 75px;
+    background: rgb(12, 12, 12);
+    backdrop-filter: blue(10.5px);
+    padding: 10px 100px;
+    border-bottom: 1px solid rgba(65, 65, 65, 0.7);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.logo_link{
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.0rem;
+    color: var(--tertiary);
+    line-height: 50px;
+}
+.logo_link i{
+    font-size: 1.0rem;
+    color: var(--secodary);
+    margin-left: -0.38rem;
+}
+.nav_section ul{
+    float: right;
+    line-height: 30px;
+    
+}
+.nav_section li{
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 15px 8px;
+    letter-spacing: 0.008rem;
+}
+.nav_section li a{
+    color: var(--bg-color);
+}
+
+.hero_section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 2rem;
+    flex-direction: column;
+}
+.text_section{
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--tertiary);
+    line-height: 7rem;
+    margin-bottom: 1rem;
+    animation: slideLeftToRight 1s ease-out 1;
+
+}
+.text_section span{
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: yellow;  
+}
+.btn_group{
+    display: flex;
+    align-items: center;
+    column-gap: 1.7rem;
+    animation: slideRightToLeft 1s ease-out 1;
+}
+@keyframes slideLeftToRight {
+    from{ 
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes slideRightToLeft {
+    from{
+        transform: translatex(-100%);
+    }
+    to{
+        transform: translatex(0);
+    }
+    
+}
+
+.about_section{
+    background-color: antiquewhite;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 100px 100px;
+    display: flex;
+    align-items: center;
+}
+.image_section{
+    width: 54%;
+    height: auto;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.about_img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center;
+}
+.content_section{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    border-radius: 4px;
+    right: 100px;
+    background: green;
+    align-items: flex-start;
+    justify-content: start;
+    row-gap: 1.1rem;
+    padding: 30px 30px 30px 160px;
+    box-shadow: 5px 5px 10px rgba(68, 27, 5, 0.12);
+    /* border: 1px solid rgba(143, 143, 143); */
+} 
+.about_title{
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color:var(--primary);
+}
+.about_desc{
+    font-size: 0.99rem;
+    line-height: 1.2rem;
+    color: white;
+    margin-bottom: 1.3rem;
+}
+.about_btn{
+    border-radius:4px ;
+    margin-bottom: 1.3rem;
+}
+
+.travel_categories_section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 100px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.desc{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+.category_box_section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+}
+.category_box{
+    width: 400px;
+    height: auto;
+    background: var(--fourth);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.category_box:hover{
+    box-shadow: 2px 5px rgba(0 0 0 0.25);
+    transform: translateY(-15px);
+}
+.cat_img{
+    width: 100%;
+    height: 40vh;
+    object-position: center;
+}
+.cat_title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: var(--primary);
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease-out;
+}
+.category_box:hover .cat_title{
+    color: var(--tertiary);
+}
+.footer{
+    height: 30vh;
+    color: white;
+    background: black;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.footer1{
+    margin-top: 15px;
+}
+
+/* about.html */
+.tourist{
+    margin-top: 100px;
+}
+.main_div{
+    display: flex;
+}
+.img{
+    width: 100px;
+    height: 200px;
+}
+.desc_a{
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary);
+    margin-top: px;
+    background: var(--secodary);
+}
+.img{
+    width: 400px;
+    height: 400px;
+    background: var(--fourth);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.category_box_section_a{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+}
+.category_box_c{
+    width: 400px;
+    height: auto;
+    background: var(--fourth);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.category_box_c:hover{
+    box-shadow: 2px 5px rgba(0 0 0 0.25);
+    transform: translateY(-15px);
+
+}
+.hello{
+    font-size: 1.3rem;
+    font-weight: 60;
+    letter-spacing: 0.1rem;
+    color: var(--bg-color);
+    padding: 20px;
+    text-align: center
+}
+.contact{
+    width: 100%;
+    height: 70vh;
+    background: var(--linear-background), url(/image/Independence_Square_Accra_Ghana.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+ 
+
+.panic {
+    width: 600px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 130px;
+}
+
+.form-box {
+    display: flex;
+    width: 100%;
+}
+
+.left-box {
+    width: 50%;
+    background: green;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.left-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.register-btn {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.register-btn:hover {
+    background: white;
+    color: #6c8eff;
+}
+
+.right-box {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.right-box h2 {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #6c8eff;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #5a7ddb;
+}
+
+.social-text {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-btn {
+    border: none;
+    background: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.video{
+    display: flex;
+    margin-top: 50px;
+}
+video{
+    margin-top: 10px;
+    margin-left: 100px;
+    border: 1px solid black;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) ;
+
+}
+h3{
+    margin-left: 500px;
+    margin-top: 50px;
+    
+}
+.h6{
+    color: black;
+    text-align: center;
+}
+
+h6{
+    text-align: center;
+    color: white;
+}
+
+/* destination section */
+.dest_na{
+    background: linear-gradient(rgb(6, 192, 77), rgb(10, 160, 10), rgb(28, 211, 28));
+    background-repeat: no-repeat;
+}
+
+#first{
+    margin-top: 90px;
+}
+
+.las{
+    font-size: 1.9rem;
+    font-weight: 5000;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+#son{
+    align-content: center;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 30px; 
+}
+.img{
+    border-radius: 50%;
+}
+.mount{
+    color: black;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
